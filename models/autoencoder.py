@@ -9,21 +9,29 @@ class AutoEncoder(nn.Module):
 
         # Encoder
         self.encoder = nn.Sequential(
-            nn.Linear(input_dim, 128),
+            nn.Linear(input_dim, 256),
+            nn.ReLU(),
+            nn.Linear(256, 128),
             nn.ReLU(),
             nn.Linear(128, 64),
             nn.ReLU(),
             nn.Linear(64, 32),
+            nn.ReLU(),
+            nn.Linear(32, 16),
             nn.ReLU()
         )
 
         # Decoder
         self.decoder = nn.Sequential(
+            nn.Linear(16, 32),
+            nn.ReLU(),
             nn.Linear(32, 64),
             nn.ReLU(),
             nn.Linear(64, 128),
             nn.ReLU(),
-            nn.Linear(128, input_dim)
+            nn.Linear(128, 256),
+            nn.ReLU(),
+            nn.Linear(256, input_dim)
         )
 
     def forward(self, x):

@@ -6,7 +6,8 @@ files = [
     '../data/raw/BenignTraffic1.pcap_Flow.csv',
     '../data/raw/BenignTraffic2.pcap_Flow.csv',
     '../data/raw/BenignTraffic3.pcap_Flow.csv',
-    '../data/raw/DDoS-HTTP_Flood-.pcap_Flow.csv'
+    '../data/raw/DDoS-HTTP_Flood-.pcap_Flow.csv',
+    '../data/raw/MITM-ArpSpoofing.pcap_Flow.csv',
 ]
 # 기준 열: 첫 번째 파일의 열
 base_columns = None

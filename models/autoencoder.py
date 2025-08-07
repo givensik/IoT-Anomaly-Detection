@@ -9,7 +9,9 @@ class AutoEncoder(nn.Module):
 
         # Encoder
         self.encoder = nn.Sequential(
-            nn.Linear(input_dim, 256),
+            nn.Linear(input_dim, 512),
+            nn.ReLU(),
+            nn.Linear(512, 256),
             nn.ReLU(),
             nn.Linear(256, 128),
             nn.ReLU(),
@@ -31,7 +33,9 @@ class AutoEncoder(nn.Module):
             nn.ReLU(),
             nn.Linear(128, 256),
             nn.ReLU(),
-            nn.Linear(256, input_dim)
+            nn.Linear(256, 512),
+            nn.ReLU(),
+            nn.Linear(512, input_dim)  # 출력은 입력 차원과 동일
         )
 
     def forward(self, x):

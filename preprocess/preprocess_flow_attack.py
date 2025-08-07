@@ -68,7 +68,7 @@ if __name__ == '__main__':
     #             output_name='benign_processed.csv'  # 하나로 합칠거면 이렇게
     #         )
     for filename in os.listdir(RAW_DATA_DIR):
-        if filename.startswith('DDoS-HTTP') and filename.endswith('pcap_Flow.csv'):
+        if filename.startswith('DDoS') and filename.endswith('pcap_Flow.csv'):
             preprocess_file(
                 path=os.path.join(RAW_DATA_DIR, filename),
                 output_name='DDoS-PreProcessed.csv'  # 하나로 합칠거면 이렇게

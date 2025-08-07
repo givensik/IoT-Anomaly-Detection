@@ -21,10 +21,10 @@ train_loader = DataLoader(TensorDataset(train_data), batch_size=256, shuffle=Tru
 input_dim = data.shape[1]
 model = AutoEncoder(input_dim)
 criterion = nn.MSELoss()
-optimizer = optim.Adam(model.parameters(), lr=0.001)
+optimizer = optim.Adam(model.parameters(), lr=0.0001)
 
 # 학습 루프
-epochs = 30
+epochs = 70
 for epoch in range(epochs):
     model.train()
     epoch_loss = 0

@@ -24,7 +24,7 @@ criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=0.0001)
 
 # 학습 루프
-epochs = 70
+epochs = 50
 for epoch in range(epochs):
     model.train()
     epoch_loss = 0

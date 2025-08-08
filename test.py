@@ -56,6 +56,8 @@ with torch.no_grad():
 # threshold = loss.mean() + 3 * loss.std() 
 # threshold = loss.mean() + 2 * loss.std() # 임계값 줄이기
 
+# branch test
+
 # JYP: 아래 내용은 최적의 임계값을 찾는 부분
 
 precisions, recalls, thresholds = precision_recall_curve(y_true, loss.numpy())

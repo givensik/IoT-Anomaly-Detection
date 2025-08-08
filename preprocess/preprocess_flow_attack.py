@@ -5,8 +5,8 @@ import os
 from sklearn.preprocessing import MinMaxScaler
 import joblib
 
-RAW_DATA_DIR = '../data/raw'
-PROCESSED_DATA_DIR = '../data/processed'
+RAW_DATA_DIR = 'D:\Github\IoT-Anomaly-Detection\data\processed'
+PROCESSED_DATA_DIR = 'D:\Github\IoT-Anomaly-Detection\data\processed'
 os.makedirs(PROCESSED_DATA_DIR, exist_ok=True)
 
 def is_float_column(series):
